@@ -1,3 +1,15 @@
+# This code is part of cqlib.
+#
+# Copyright (C) 2025-2026 China Telecom Quantum Group.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
+
 """Tianyan quantum-hardware estimator for cqlib 2.x.
 
 This module integrates the standalone :mod:`cqlib_tianyan` package with the
