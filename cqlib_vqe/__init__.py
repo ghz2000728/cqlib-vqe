@@ -54,7 +54,7 @@ from .vqe import (
     VQESolver,
 )
 
-__version__ = "1.4.3"
+__version__ = "0.1.0"
 
 __all__ = [
     "__version__",
