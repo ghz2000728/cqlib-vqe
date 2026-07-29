@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cqlib-vqe"
+version = "1.4.3"
+description = "Adaptive canonical singlet-UCCSD and active-space VQE for cqlib 2.x"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{name = "Cqlib VQE Contributors"}]
+keywords = [
+    "quantum computing",
+    "variational quantum eigensolver",
+    "VQE",
+    "UCCSD",
+    "quantum chemistry",
+    "cqlib",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy>=2.1",
+    "scipy>=1.11",
+    "cqlib>=0.1.0",
+]
+
+[project.optional-dependencies]
+chemistry = [
+    "openfermion>=1.6",
+    "openfermionpyscf>=0.5",
+    "pyscf>=2.6",
+]
+tianyan = ["cqlib-tianyan>=0.1.0"]
+test = ["pytest>=8"]
+dev = ["build>=1.2", "pytest>=8", "ruff>=0.6"]
+all = [
+    "openfermion>=1.6",
+    "openfermionpyscf>=0.5",
+    "pyscf>=2.6",
+    "cqlib-tianyan>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "cqlib_vqe*",
+    "chemistry*",
+    "optim*",
+    "util*",
+    "utils*",
+    "vqe*",
+]
+exclude = ["tests*", "examples*", "tools*", "benchmarks*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
