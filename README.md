@@ -1,5 +1,7 @@
 # cqlib-vqe
 
+[简体中文](README.zh-CN.md)
+
 `cqlib-vqe` is a VQE package for molecular electronic-structure calculations on
 cqlib 2.x.  It provides molecular-Hamiltonian preparation, canonical
 singlet-UCCSD ansätze, Jordan-Wigner (JW), Bravyi-Kitaev (BK), and parity
