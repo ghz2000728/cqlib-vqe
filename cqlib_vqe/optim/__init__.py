@@ -10,6 +10,25 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-"""Canonical wrapper for the legacy :mod:`optim` package."""
-from optim import *  # noqa: F401,F403
-from optim import __all__ as __all__
+"""Classical optimizers used by VQE."""
+from .optim import (
+    AdagradOptimizer,
+    AdamOptimizer,
+    ClassicalOptimizer,
+    MomentumOptimizer,
+    NelderMeadOptimizer,
+    OptimizerResult,
+    QuantumCoordinateDescent,
+    SPSAOptimizer,
+)
+
+__all__ = [
+    "AdagradOptimizer",
+    "AdamOptimizer",
+    "ClassicalOptimizer",
+    "MomentumOptimizer",
+    "NelderMeadOptimizer",
+    "OptimizerResult",
+    "QuantumCoordinateDescent",
+    "SPSAOptimizer",
+]

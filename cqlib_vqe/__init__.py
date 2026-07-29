@@ -13,7 +13,7 @@
 """Public API for cqlib-vqe."""
 from __future__ import annotations
 
-from chemistry import (
+from .chemistry import (
     ActiveSpaceConfig,
     ActiveSpaceReport,
     CanonicalBasisAudit,
@@ -29,7 +29,7 @@ from chemistry import (
     pack_closed_shell_ccsd,
     select_active_space,
 )
-from vqe import (
+from .vqe import (
     AdaptiveRound,
     AdaptiveSelectedUCCSDResult,
     AdaptiveSelectedUCCSDSolver,

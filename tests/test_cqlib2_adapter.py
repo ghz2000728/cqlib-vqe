@@ -120,7 +120,7 @@ def test_hamiltonian_cache_is_content_based_not_identity_based():
 
 def test_cobyla_uses_chemistry_scale_default_rhobeg(monkeypatch):
     import types
-    import vqe.solver as solver_module
+    import cqlib_vqe.vqe.solver as solver_module
 
     captured = {}
 
@@ -152,7 +152,7 @@ def test_cobyla_uses_chemistry_scale_default_rhobeg(monkeypatch):
 
 def test_gradient_warm_start_accepts_only_a_lower_energy_point(monkeypatch):
     import types
-    import vqe.solver as solver_module
+    import cqlib_vqe.vqe.solver as solver_module
 
     class Factory:
         num_params = 1

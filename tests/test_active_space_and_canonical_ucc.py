@@ -107,7 +107,7 @@ def test_factory_orders_parameters_by_packed_index(monkeypatch):
     fake_openfermion.jordan_wigner = lambda operator: operator
     monkeypatch.setitem(sys.modules, "openfermion", fake_openfermion)
 
-    import chemistry.uccsd as uccsd
+    import cqlib_vqe.chemistry.uccsd as uccsd
 
     monkeypatch.setattr(
         uccsd,
@@ -156,7 +156,7 @@ def test_factory_can_restore_the_complete_canonical_pool(monkeypatch):
     fake_openfermion.jordan_wigner = lambda operator: operator
     monkeypatch.setitem(sys.modules, "openfermion", fake_openfermion)
 
-    import chemistry.uccsd as uccsd
+    import cqlib_vqe.chemistry.uccsd as uccsd
 
     monkeypatch.setattr(
         uccsd,

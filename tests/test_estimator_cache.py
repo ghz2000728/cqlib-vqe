@@ -16,7 +16,7 @@ import pytest
 
 from cqlib import Circuit
 
-from vqe import NativeStatevectorEstimator
+from cqlib_vqe.vqe import NativeStatevectorEstimator
 
 
 def test_prepared_hamiltonian_is_rebuilt_after_in_place_mutation():

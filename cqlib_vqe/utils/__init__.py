@@ -10,6 +10,7 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-"""Canonical wrapper for the legacy :mod:`utils` package."""
-from utils import *  # noqa: F401,F403
-from utils import __all__ as __all__
+"""Shared utilities for cqlib-vqe."""
+from .profiler import PerformanceTracker, global_tracker
+
+__all__ = ["PerformanceTracker", "global_tracker"]

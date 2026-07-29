@@ -18,9 +18,9 @@ import numpy as np
 import pytest
 
 from cqlib_vqe import DirectStatevectorEstimator, MolecularDataEngine
-from chemistry.mapping import encoded_occupied_qubits, map_fermion_operator
-from chemistry.uccsd import canonical_singlet_operator
-from vqe.factory import UCCSDFactory
+from cqlib_vqe.chemistry.mapping import encoded_occupied_qubits, map_fermion_operator
+from cqlib_vqe.chemistry.uccsd import canonical_singlet_operator
+from cqlib_vqe.vqe.factory import UCCSDFactory
 
 
 @pytest.mark.parametrize(

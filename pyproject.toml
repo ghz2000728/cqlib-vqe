@@ -55,14 +55,7 @@ all = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = [
-    "cqlib_vqe*",
-    "chemistry*",
-    "optim*",
-    "util*",
-    "utils*",
-    "vqe*",
-]
+include = ["cqlib_vqe*"]
 exclude = ["tests*", "examples*", "tools*", "benchmarks*"]
 
 [tool.pytest.ini_options]

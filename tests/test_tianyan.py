@@ -215,7 +215,7 @@ def test_constructor_rejects_auto_calibration_and_invalid_grouping():
 
 def test_existing_measurement_in_base_circuit_is_rejected(monkeypatch):
     estimator = TianyanEnergyEstimator(FakeBackend(), 1)
-    import vqe.tianyan as module
+    import cqlib_vqe.vqe.tianyan as module
 
     monkeypatch.setattr(module.qcis, "dumps", lambda circuit: "H Q0\nM Q0\n")
     with pytest.raises(ValueError, match="already contains measurement"):

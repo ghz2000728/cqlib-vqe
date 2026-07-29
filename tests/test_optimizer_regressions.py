@@ -19,7 +19,7 @@ import numpy as np
 import pytest
 from scipy.optimize import minimize
 
-from optim import (
+from cqlib_vqe.optim import (
     AdagradOptimizer,
     AdamOptimizer,
     MomentumOptimizer,
@@ -28,7 +28,7 @@ from optim import (
     QuantumCoordinateDescent,
     SPSAOptimizer,
 )
-from vqe import VQESolver
+from cqlib_vqe.vqe import VQESolver
 
 
 def test_spsa_result_value_matches_returned_parameters():

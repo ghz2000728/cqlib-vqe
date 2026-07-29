@@ -10,6 +10,56 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-"""Canonical wrapper for the legacy :mod:`vqe` package."""
-from vqe import *  # noqa: F401,F403
-from vqe import __all__ as __all__
+"""VQE circuit factories, estimators, and solver."""
+from .estimator import (
+    NativeStatevectorEstimator,
+    DirectStatevectorEstimator,
+    FastStatevectorEstimator,
+    EnergyEstimator,
+    ParallelEnergyEstimator,
+    CloudEnergyEstimator,
+)
+from .factory import UCCSD_Factory, UCCSDFactory
+from .tianyan import (
+    TianyanMeasurementGroup,
+    TianyanMeasurementPlan,
+    TianyanTermResult,
+    TianyanGroupResult,
+    TianyanEnergyResult,
+    TianyanSubmittedEvaluation,
+    TianyanEnergyEstimator,
+    TianyanCloudEnergyEstimator,
+)
+from .solver import VQESolver
+from .adaptive import (
+    AdaptiveSelectionConfig,
+    CandidateGradient,
+    AdaptiveRound,
+    AdaptiveSelectedUCCSDResult,
+    AdaptiveSelectedUCCSDSolver,
+)
+
+__all__ = [
+    "NativeStatevectorEstimator",
+    "DirectStatevectorEstimator",
+    "FastStatevectorEstimator",
+    "EnergyEstimator",
+    "ParallelEnergyEstimator",
+    "CloudEnergyEstimator",
+    "TianyanMeasurementGroup",
+    "TianyanMeasurementPlan",
+    "TianyanTermResult",
+    "TianyanGroupResult",
+    "TianyanEnergyResult",
+    "TianyanSubmittedEvaluation",
+    "TianyanEnergyEstimator",
+    "TianyanCloudEnergyEstimator",
+    "UCCSD_Factory",
+    "UCCSDFactory",
+    "VQESolver",
+    "AdaptiveSelectionConfig",
+    "CandidateGradient",
+    "AdaptiveRound",
+    "AdaptiveSelectedUCCSDResult",
+    "AdaptiveSelectedUCCSDSolver",
+]

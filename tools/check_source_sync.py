@@ -11,16 +11,15 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-"""Check that the chemistry, factory, and adaptive modules are one compatible source set."""
+"""Check that all public modules resolve to the single cqlib_vqe source tree."""
 from __future__ import annotations
 
 import importlib.metadata
 import inspect
 from pathlib import Path
 
-import chemistry
-import vqe
 import cqlib_vqe
+from cqlib_vqe import chemistry, vqe
 from cqlib_vqe import AdaptiveSelectionConfig, AdaptiveSelectedUCCSDSolver, UCCSDFactory
 
 root = Path(__file__).resolve().parents[1]
@@ -32,7 +31,7 @@ paths = {
 }
 
 print("project root   :", root)
-print("canonical import:", Path(cqlib_vqe.__file__).resolve())
+print("package import  :", Path(cqlib_vqe.__file__).resolve())
 print("package version:", importlib.metadata.version("cqlib-vqe"))
 for name, path in paths.items():
     print(f"{name:15s}: {path}")
@@ -55,4 +54,4 @@ for required in (
     if required not in adaptive_params:
         raise RuntimeError(f"AdaptiveSelectionConfig is missing {required!r}")
 
-print("source synchronization: PASS")
+print("single source tree: PASS")

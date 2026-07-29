@@ -223,7 +223,7 @@ def _run_one(name: str, args: argparse.Namespace, out_dir: Path) -> dict[str, An
             print("=" * 88)
             print(f"molecule                 = {name}")
             print(f"project root             = {PROJECT_ROOT}")
-            import vqe
+            from cqlib_vqe import vqe
 
             print(f"vqe source               = {Path(vqe.__file__).resolve()}")
             print(f"installed package version= {importlib.metadata.version('cqlib-vqe')}")
@@ -490,8 +490,7 @@ def _failed_summary(name: str, out_dir: Path, exc: BaseException) -> dict[str, A
 
 def _preflight_framework() -> None:
     """Fail immediately when the checked-out source is not the complete API set."""
-    import chemistry
-    import vqe
+    from cqlib_vqe import chemistry, vqe
 
     project = PROJECT_ROOT.resolve()
     modules = {
@@ -516,7 +515,7 @@ def _preflight_framework() -> None:
     missing = sorted(required_factory_parameters - set(factory_parameters))
     if missing:
         raise RuntimeError(
-            "The local vqe/factory.py is older than the adaptive solver. "
+            "The local cqlib_vqe/vqe/factory.py is older than the adaptive solver. "
             f"Missing UCCSDFactory parameters: {missing}. "
             "Apply the complete source-sync overlay; partial overlays are unsupported."
         )
