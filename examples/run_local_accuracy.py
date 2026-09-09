@@ -276,9 +276,9 @@ def main() -> None:
     print(f"pool mode       : {args.pool_mode}")
     print(f"active space    : {molecule.active_space_report.to_dict()}")
     if args.pool_mode == "adaptive":
-        print(f"full pool       : {tuple(result["full_pool_indices"])}")
-        print(f"initial selected: {tuple(result["initial_selected_packed_indices"])}")
-        print(f"remaining pool  : {tuple(result["remaining_candidate_packed_indices"])}")
+        print(f"full pool       : {tuple(result['full_pool_indices'])}")
+        print(f"initial selected: {tuple(result['initial_selected_packed_indices'])}")
+        print(f"remaining pool  : {tuple(result['remaining_candidate_packed_indices'])}")
     print(f"selected params : {len(selected_indices)}/{full_count}")
     print(f"packed indices  : {tuple(selected_indices)}")
     print(f"VQE energy      : {energy:+.12f} Ha")

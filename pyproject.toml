@@ -34,7 +34,7 @@ classifiers = [
 dependencies = [
     "numpy>=2.1",
     "scipy>=1.11",
-    "cqlib>=0.1.0",
+    "cqlib>=1.4.0b1",
 ]
 
 [project.optional-dependencies]
@@ -43,14 +43,14 @@ chemistry = [
     "openfermionpyscf>=0.5",
     "pyscf>=2.6",
 ]
-tianyan = ["cqlib-tianyan>=0.1.0"]
+tianyan = ["cqlib-tianyan>=0.1.0b1"]
 test = ["pytest>=8"]
 dev = ["build>=1.2", "pytest>=8", "ruff>=0.6"]
 all = [
     "openfermion>=1.6",
     "openfermionpyscf>=0.5",
     "pyscf>=2.6",
-    "cqlib-tianyan>=0.1.0",
+    "cqlib-tianyan>=0.1.0b1",
 ]
 
 [tool.setuptools.packages.find]
